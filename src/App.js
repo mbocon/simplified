@@ -4,6 +4,7 @@ import './App.css';
 import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import HomePage  from './pages/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -38,6 +39,7 @@ function App(props) {
 				<Route exact path='/signup' render={props => <SignupPage {...props} handleSignupOrLogin={handleSignupOrLogin} />} />
 				<Route exact path='/login' render={props => <LoginPage {...props} handleSignupOrLogin={handleSignupOrLogin} />} />
 			</Switch>
+			<Footer user={userState.user}/>
 		</div>
 	);
 }
