@@ -1,13 +1,21 @@
-# MERN-STARTER-WITH-AUTH-FRONTEND
+# SIMPLIFIED 
 
-This is the frontend REPO for MERN-STARTER-WITH-AUTH.  
+This is the frontend for my Simplified App. The Simplified app is an all-in-one app meant to simplify the process of getting yourself organized. The app features a budgeting tool, to-do list, daily journal, OpenWeather API and more...
 
-## Installation
+## Technologies Used
 
-Simply clone this repo to get started.
+- React
+- JSX
+- CSS
+- JavaScript
+- Bootstrap
+- Flexbox
+- User Auth with JWT
 
-## Usage
+## VISIT SITE:
 
-Once you've cloned this repo, cd into client folder and run the terminal command npm i to install the dependencies.
+- Live link will go here once deployed 
 
-You'll need to also clone [this](https://github.com/mbocon/MERN-STARTER-WITH-AUTH-API.git) backend codebase. 
+## FUTURE ENHANCEMENTS:
+
+- TBD
