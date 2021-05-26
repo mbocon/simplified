@@ -21,6 +21,6 @@
     margin-right: 1rem;
 }
 
-.footer-user p {
+.footer-user > p {
     margin-top: 1rem;
 }

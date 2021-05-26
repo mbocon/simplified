@@ -7,12 +7,18 @@
 	box-shadow: 0px 5px 18px 0px var(--main-fuscia);
 }
 
+.navbar-brand {
+	font-family: 'Caveat', cursive;
+	font-weight: 700;
+}
+
 .NavBar-link {
 	display: flex;
 	align-items: flex-start;
 	height: 2rem;
 	font-size: 1.25rem;
 	color: var(--dark-blue);
+	text-decoration: none;
 }
 
 .Nav-collapse {
@@ -42,7 +48,21 @@
 	background-color: var(--main-fuscia);
 }
 
-@media (min-width: 250px) and (max-width: 600px) {
+.login-nav-btn,
+.signup-nav-btn{
+	color: var(--main-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .9rem;
+}
+
+.login-nav-btn:hover,
+.signup-nav-btn:hover{
+	background: var(--dark-blue)!important;
+}
+
+@media (max-width: 1000px) {
 	.Nav-dropdown {
 		margin-top: 1rem;
 		font-size: 0.9rem;
@@ -64,7 +84,7 @@
 	}
 
 	.NavBar-link {
-		font-size: 1rem;
+		font-size: .9rem;
 	}
 
 	.navbar-toggler {

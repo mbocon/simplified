@@ -1,0 +1,82 @@
+.calculator-page {
+	align-items: flex-start;
+}
+
+.Calculator {
+	height: 50vh;
+	display: block;
+	width: 500px;
+	margin: 3rem auto;
+}
+
+.Button {
+	color: var(--main-white);
+	width: 25%;
+	height: 20%;
+	font-size: 5vmin;
+	border-color: black;
+}
+
+.Button:focus {
+	outline: 0px;
+}
+
+.Button:active {
+	opacity: 0.5;
+}
+
+.BlackButton {
+	background-color: var(--dark-blue);
+}
+
+.GrayButton {
+	background-color: var(--main-blue);
+}
+
+.OrangeButton {
+	background-color: var(--main-orange);
+}
+
+.LargeButton {
+	width: 50%;
+	text-align: left;
+	padding-left: 10%;
+}
+
+.Display {
+	width: 100%;
+	height: 20%;
+	background-color: var(--dark-blue);
+	font-size: 6vmin;
+	color: white;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column-reverse;
+}
+
+.DisplaySpan {
+	height: 100%;
+	margin: -5px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 250px) {
+    .Calculator {
+        width: 275px;
+        height: 45vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .Calculator {
+        width: 350px;
+    }
+}
+
+@media (min-width: 851px) {
+    .Calculator {
+        width: 400px;
+    }
+}

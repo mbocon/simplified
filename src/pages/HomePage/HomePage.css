@@ -1,31 +1,42 @@
 .grid-area {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-    height: 80vh;
-    padding: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	align-items: center;
+	height: 80vh;
+	padding: 1rem;
 }
 
 .HomePage-link {
-    background-color: var(--main-blue);
-    padding: 1rem;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    font-size: 1.15rem;
-    text-decoration: none;
-    color: rgb(69, 69, 69);
-    box-shadow: 0px 2px 15px -2px var(--main-fuscia);
-    border-radius: 1rem;
-
+	background-color: var(--main-blue);
+	padding: 1rem;
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-self: center;
+	font-size: 1.25rem;
+	text-decoration: none;
+	color: rgb(69, 69, 69);
+	box-shadow: 0px 2px 15px -2px var(--main-fuscia);
+	border-radius: 1rem;
 }
 
 .HomePage-link:hover {
-    background-color: var(--main-fuscia);
-    color: var(--main-white);
-    box-shadow: 0px 2px 15px -2px var(--dark-blue);
+	background-color: var(--main-fuscia);
+	color: var(--main-white);
+	box-shadow: 0px 2px 15px -2px var(--dark-blue);
+}
+
+.HomePage-link > p {
+    margin-bottom: 0rem;
+}
+
+@media (max-width: 650px) {
+	.HomePage-link {
+		height: 100px;
+		width: 100px;
+		font-size: 1.15rem;
+	}
 }

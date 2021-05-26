@@ -37,7 +37,6 @@ function SignupForm(props) {
 	}
 	return (
 		<div>
-			<header className='header-footer'>Sign Up</header>
 			<form className='form-horizontal' onSubmit={handleSubmit}>
 				<div className='form-group'>
 					<div className='col-sm-12'>
@@ -45,6 +44,7 @@ function SignupForm(props) {
 							type='text'
 							className='form-control'
 							placeholder='Name'
+							autoFocus
 							value={formState.name}
 							name='name'
 							onChange={handleChange}
@@ -89,11 +89,11 @@ function SignupForm(props) {
 				</div>
 				<div className='form-group'>
 					<div className='col-sm-12 text-center'>
-						<button className='btn btn-default' disabled={isFormInvalid()}>
-							Sign Up
+						<button className='btn btn-primary login-btn' disabled={isFormInvalid()}>
+							SIGN UP
 						</button>
 						&nbsp;&nbsp;
-						<Link to='/'>Cancel</Link>
+						<Link to='/' className='btn btn-secondary login-cancel'>CANCEL</Link>
 					</div>
 				</div>
 			</form>
