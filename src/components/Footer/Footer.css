@@ -5,9 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 0 1rem; */
     box-shadow: 0px 10px 18px 13px var(--main-fuscia);
-    /* opacity: .75; */
   }
 
 .footer-content {
@@ -17,16 +15,12 @@
 }
   
 .footer-user {
-    background-color: var(--main-fuscia);
     display: flex;
     align-items: center;
-    opacity: .75;
-    color: whitesmoke;
+    color: var(--main-fuscia);
     margin-right: 1rem;
-    border-radius: 50%;
 }
 
 .footer-user p {
-    margin-top: .7rem;
-    padding:4px;
+    margin-top: 1rem;
 }

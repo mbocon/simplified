@@ -17,7 +17,7 @@ export default function NavDrop(props) {
 						<Dropdown.Item href='/timer'>Timers</Dropdown.Item>
 						<Dropdown.Item href='/journal'>Journal</Dropdown.Item>
 						<Dropdown.Item href='/workouts'>Workouts</Dropdown.Item>
-						<Dropdown.Item href='/diet'>Diet</Dropdown.Item>
+						<Dropdown.Item href='/diet'>Nutrition</Dropdown.Item>
 						<Dropdown.Item href='/weather'>Weather</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>

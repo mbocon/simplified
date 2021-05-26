@@ -12,12 +12,12 @@ const NavBar = props => {
 			<Navbar.Brand href='/'>Simplified</Navbar.Brand>
 			<Navbar.Toggle aria-controls='basic-navbar-nav' className='ml-auto' />
 			<Navbar.Collapse id='basic-navbar-nav' className='Nav-collapse'>
-				{/* <span className='NavBar-welcome'>User: {props.user.name}</span> */}
 				<NavDrop user={props.user} />
 				<Nav className='ml-auto'>
 					<Link to='' className='NavBar-link' onClick={props.handleLogout}>
-          <p>Log out <FaSignOutAlt /></p> 
-          {/* <FaSignOutAlt className='alt-font' /> */}
+						<p>
+							Log out <FaSignOutAlt />
+						</p>
 					</Link>
 				</Nav>
 			</Navbar.Collapse>
