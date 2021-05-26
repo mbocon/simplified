@@ -18,9 +18,18 @@
     display: flex;
     align-items: center;
     color: var(--main-fuscia);
-    margin-right: 1rem;
+    background-color: var(--main-black);
+    height: 100%;
+    padding: 0px .75rem;
 }
 
 .footer-user > p {
     margin-top: 1rem;
+}
+
+.footer-user-span {
+    background-color: rgb(0, 255, 55);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
 }

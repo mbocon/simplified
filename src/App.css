@@ -5,6 +5,7 @@
   --main-fuscia: #b700ff;
   --secondary-blue: #addeff;
   --main-white: #fff;
+  --main-black: #000;
 }
 
 .App {
@@ -15,7 +16,7 @@
   height: 100vh;
   background-color: var(--secondary-blue);
   font-family: 'Oswald', sans-serif;
-
+  letter-spacing: 1px;
 
 }
 

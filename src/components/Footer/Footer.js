@@ -13,7 +13,13 @@ export default function Footer(props) {
 					All Rights Reserved {copy} {year}
 				</span>
 			</div>
-			<div className='footer-user'>{props.user ? <p>Welcome, {props.user.name}</p> : null}</div>
+			{props.user ? (
+				<div className='footer-user'>
+					<span>
+						<div className='footer-user-span'></div> {props.user.name}
+					</span>
+				</div>
+			) : null}
 		</div>
 	);
 }
