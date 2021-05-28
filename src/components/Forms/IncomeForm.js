@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useForm from '../CustomHooks/useForm';
 
 const IncomeForm = props => {
+	console.log(props,'  are income form props')
 	const { handleChange, handleSubmit, handleCancel } = useForm();
 	const [editedSource, setEditedSource] = useState(false);
 	const [editedAmount, setEditedAmount] = useState(false);
@@ -47,6 +48,7 @@ const IncomeForm = props => {
 					required
 				/>
 				<input type='text' name='type' id='type' defaultValue='income' style={{ display: 'none' }} />
+				<input type='text' name='user' id='user' defaultValue={props.user._id} style={{ display: 'none' }} />
 
 				<button className='btn btn-primary budget-submit-btn' type='submit'>
 					Submit

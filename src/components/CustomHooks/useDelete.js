@@ -1,19 +1,12 @@
-let href = window.location.href;
-
-let API_URL;
-
-if(href.includes('localhost')) {
-	API_URL = 'http://localhost:4000';
-} else {
-	API_URL = 'https://organizer-server-api.herokuapp.com';
-}
+const API_URL = 'http://localhost:3001'
 
 const useDelete = () => {
-	const handleDelete = (event, props, handleUpdateAfterDelete) => {
+	const handleDelete = (event, item, userId, handleUpdateAfterDelete) => {
+		console.log(item, userId, 'are handle delete props')
 		if (event) {
 			event.preventDefault();
 
-			fetch(`${API_URL}/api/budgets/delete/${props.user}/${props._id}`, {
+			fetch(`${API_URL}/api/budgets/delete/${userId}/${item._id}`, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',

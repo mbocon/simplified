@@ -1,16 +1,8 @@
 import { useState } from 'react';
+const API_URL = 'http://localhost:3001'
 
-let href = window.location.href;
-
-let API_URL;
-
-if(href.includes('localhost')) {
-	API_URL = 'http://localhost:4000';
-} else {
-	API_URL = 'https://organizer-server-api.herokuapp.com';
-}
-
-const useForm = () => {
+const useForm = (props) => {
+	console.log(props, 'are use form props');
 	const [inputs, setInputs] = useState({});
 
 	const handleSubmit = (event, props) => {
@@ -25,7 +17,7 @@ const useForm = () => {
 			let value = formattedInputs[1].value;
 			let formattedValue = value.replace(/[, ]+/g, '').trim();
 			let data = {
-				user: localStorage._id,
+				user: props.user._id,
 				type: formattedInputs[0].type,
 				name: formattedInputs[0].value,
 				value: formattedValue,

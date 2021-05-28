@@ -22,14 +22,14 @@ export default function Budget(props) {
 				) : null}
 				{displayForm === true ? (
 					<div className='budget-form'>
-						{formType === 'income' ? <IncomeForm displayForm={displayForm} setDisplayForm={setDisplayForm} /> : null}
+						{formType === 'income' ? <IncomeForm displayForm={displayForm} setDisplayForm={setDisplayForm} user={props.user} /> : null}
 						{formType === 'expense' ? <ExpenseForm displayForm={displayForm} setDisplayForm={setDisplayForm} /> : null}
 						{formType === 'debt' ? <DebtForm displayForm={displayForm} setDisplayForm={setDisplayForm} /> : null}
 						{formType === 'savings' ? <SavingsForm displayForm={displayForm} setDisplayForm={setDisplayForm} /> : null}
 					</div>
 				) : null}
 			</div>
-			<ResponsiveTable />
+			<ResponsiveTable user={props.user} />
 		</div>
 	);
 }

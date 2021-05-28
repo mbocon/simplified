@@ -5,17 +5,12 @@ import './Budget.css';
 import useDelete from '../CustomHooks/useDelete';
 import EditBudget from './EditBudget';
 
-let href = window.location.href;
+const API_URL = 'http://localhost:3001'
 
-let API_URL;
+console.log(API_URL, 'is api url')
 
-if(href.includes('localhost')) {
-	API_URL = 'http://localhost:4000';
-} else {
-	API_URL = 'https://organizer-server-api.herokuapp.com';
-}
-
-export default function ResponsiveTable() {
+export default function ResponsiveTable(props) {
+	console.log(props.user._id, 'are table props')
 	let [, setState] = useState();
 	const [allBudgetItems, setAllBudgetItems] = useState([]);
 	const [income, setIncome] = useState(0);
@@ -40,10 +35,9 @@ export default function ResponsiveTable() {
 		savingsRef.current = savingsRef.current - savingsRef.current;
 		leftoverRef.current = leftoverRef.current - leftoverRef.current;
 
-		fetch(`${API_URL}/api/budgets/${localStorage._id}/getBudgets`)
+		fetch(`${API_URL}/api/budgets/${props.user._id}/getBudgets`)
 			.then(response => response.json())
 			.then(json => {
-				console.log(json,' is  my json objs', localStorage._id, 'is my localstorage id')
 				json.forEach(item => {
 					if (item.type === 'income') setIncome((incomeRef.current += parseInt(item.value)));
 					if (item.type === 'expense') setExpenses((expenseRef.current += parseInt(item.value)));
@@ -64,7 +58,7 @@ export default function ResponsiveTable() {
 			savingsRef.current = savingsRef.current - savingsRef.current;
 			leftoverRef.current = leftoverRef.current - leftoverRef.current;
 
-			fetch(`${API_URL}/api/budgets/${localStorage._id}/getBudgets`)
+			fetch(`${API_URL}/api/budgets/${props.user._id}/getBudgets`)
 				.then(response => response.json())
 				.then(json => {
 					json.forEach(item => {
@@ -89,7 +83,7 @@ export default function ResponsiveTable() {
 			savingsRef.current = savingsRef.current - savingsRef.current;
 			leftoverRef.current = leftoverRef.current - leftoverRef.current;
 
-			fetch(`${API_URL}/api/budgets/${localStorage._id}/getBudgets`)
+			fetch(`${API_URL}/api/budgets/${props.user._id}/getBudgets`)
 				.then(response => response.json())
 				.then(json => {
 					setIncome(0);
@@ -210,7 +204,7 @@ export default function ResponsiveTable() {
 												</button>
 												<button
 													style={{ border: 'none', background: 'none'}}
-													onClick={event => handleDelete(event, item, handleUpdateAfterDelete)}>
+													onClick={event => handleDelete(event, item, props.user._id, handleUpdateAfterDelete)}>
 													 {'🗑️'}
 												</button>
 											</td>

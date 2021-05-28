@@ -1,14 +1,5 @@
 import { useState } from 'react';
-
-let href = window.location.href;
-
-let API_URL;
-
-if(href.includes('localhost')) {
-	API_URL = 'http://localhost:4000';
-} else {
-	API_URL = 'https://organizer-server-api.herokuapp.com';
-}
+const API_URL = process.env.API_URL;
 
 const useJournal = callback => {
 	const [inputs, setInputs] = useState({});

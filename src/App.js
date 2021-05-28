@@ -17,7 +17,6 @@ import { getUser, logout } from './services/userService';
 
 function App(props) {
 	/* local variables */
-
 	/* hooks */
 
 	const [userState, setUserState] = useState({ user: getUser() });
@@ -37,11 +36,7 @@ function App(props) {
 		setUserState({ user: getUser() });
 	}
 
-	let  name;
-	if(userState) {
-		name = userState.user.name
-	}
-	console.log(name, 'is  user name')
+	
 	return (
 		<div className='App'>
 			<NavBar user={userState.user} handleLogout={handleLogout} />
