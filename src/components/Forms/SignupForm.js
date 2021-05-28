@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signup } from '../../../services/userService';
+import { signup } from '../../services/userService';
 
 function SignupForm(props) {
 	const [formState, setFormState] = useState({
